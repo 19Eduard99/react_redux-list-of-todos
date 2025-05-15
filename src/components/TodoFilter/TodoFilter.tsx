@@ -11,7 +11,7 @@ export const TodoFilter: React.FC<Props> = ({ status, query }) => {
   const dispatch = useDispatch();
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
-    dispatch(dispatch(setQuery(event.target.value)));
+    dispatch(setQuery(event.target.value));
   };
 
   return (

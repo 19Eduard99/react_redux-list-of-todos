@@ -23,12 +23,13 @@ export const App = () => {
     return todos
       .filter(todo => {
         switch (filter.status) {
-          case 'all':
-            return todo;
           case 'active':
             return !todo.completed;
           case 'completed':
             return todo.completed;
+          case 'all':
+          default:
+            return true;
         }
       })
       .filter(todo =>
